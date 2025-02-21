@@ -3,6 +3,8 @@ import React, { useEffect, useRef, useState } from "react";
 import platformImg from "./assets/img/platform.png";
 import platformSmallImg from './assets/img/platformSmall.png';
 import backgroundImg from "./assets/img/background.png";
+import backgroundImg2 from "./assets/img/background2.png";
+
 import spriteStandRight from './assets/img/standingSprite.png';
 import spriteRunLeft from './assets/img/spriteRunLeft.png';
 import spriteRunRight from './assets/img/spriteRunRight.png';
@@ -209,7 +211,7 @@ const App = () => {
       
     genericObject.current = [
       new GenericObject({ x: -1, y: -1, image: backgroundImage }), // // //
-      new GenericObject({ x: backgroundImage.width-10, y: -1, image: backgroundImage }),
+      new GenericObject({ x: backgroundImage.width-10, y: -1, image: createImage(backgroundImg2) }),
       new GenericObject({ x: -1, y: window.innerHeight - (platformImage.height + treeImage.height), image: treeImage }),
       new GenericObject({ x: platformImage.width * 2, y: window.innerHeight - (platformImage.height + treeImage.height), image: treeImage }),
       new GenericObject({ x: platformImage.width * 6, y: window.innerHeight - (platformImage.height + treeImage.height), image: treeImage }),
