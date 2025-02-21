@@ -211,7 +211,7 @@ const App = () => {
       
     genericObject.current = [
       new GenericObject({ x: -1, y: -1, image: backgroundImage }), // // //
-      new GenericObject({ x: backgroundImage.width-10, y: -1, image: createImage(backgroundImg2) }),
+      // new GenericObject({ x: backgroundImage.width-10, y: -1, image: createImage(backgroundImg2) }),
       new GenericObject({ x: -1, y: window.innerHeight - (platformImage.height + treeImage.height), image: treeImage }),
       new GenericObject({ x: platformImage.width * 2, y: window.innerHeight - (platformImage.height + treeImage.height), image: treeImage }),
       new GenericObject({ x: platformImage.width * 6, y: window.innerHeight - (platformImage.height + treeImage.height), image: treeImage }),
