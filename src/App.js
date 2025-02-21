@@ -232,14 +232,22 @@ const App = () => {
   
   
 
-    useEffect(() => {
-        const handleResize = () => {
-            setCanvasSize({ width: window.innerWidth, height: window.innerHeight });
-        };
+    // useEffect(() => {
+    //     const handleResize = () => {
+    //         setCanvasSize({ width: window.innerWidth, height: window.innerHeight });
+    //     };
         
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
+    //     window.addEventListener("resize", handleResize);
+    //     return () => window.removeEventListener("resize", handleResize);
+  // }, []);
+  
+  useEffect(() => {
+  const hasVisited = sessionStorage.getItem("hasVisited");
+  if (!hasVisited) {
+    sessionStorage.setItem("hasVisited", "true");
+    window.location.reload();
+  }
+}, []);
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -390,6 +398,7 @@ const App = () => {
 
         };
       init();
+
       animate();
 
 
