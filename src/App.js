@@ -36,7 +36,7 @@ class Player {
         this.velocity = { x: 0, y: 0 };
         this.width = 69;
       this.height = 130;
-      this.speed = 7;
+      this.speed = 10;
       this.image = createImage(spriteStandRight);
       this.frames = 0; 
       this.sprites = {
