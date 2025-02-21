@@ -232,14 +232,14 @@ const App = () => {
   
   
 
-    // useEffect(() => {
-    //     const handleResize = () => {
-    //         setCanvasSize({ width: window.innerWidth, height: window.innerHeight });
-    //     };
+    useEffect(() => {
+        const handleResize = () => {
+            setCanvasSize({ width: window.innerWidth, height: window.innerHeight });
+        };
         
-    //     window.addEventListener("resize", handleResize);
-    //     return () => window.removeEventListener("resize", handleResize);
-  // }, []);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+  }, []);
   
   useEffect(() => {
   const hasVisited = sessionStorage.getItem("hasVisited");
