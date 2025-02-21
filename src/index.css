@@ -1,13 +1,20 @@
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'UpheavalPro', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'Origap';
+  src: url('./assets/fonts/origap__.ttf');
+}
+
+@font-face {
+  font-family: 'Minercraftory';
+  src: url('./assets/fonts/Minercraftory.ttf');
+}
+
+@font-face {
+  font-family: 'UpheavalPro';
+  src: url('./assets/fonts/UpheavalPro.ttf');
 }

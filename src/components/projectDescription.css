@@ -1,0 +1,134 @@
+
+.bg-container  {
+    background-color: #BE8845;
+    /* color: #372309; */
+    border-radius: 5px;
+    box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.5); /* Inner shadow */
+}
+
+#bord-nn {
+    border: none;
+}
+
+.line-bord-header {
+    border-bottom: 1px solid #372309;
+    
+}
+
+.line-bord-footer {
+    border-top: 1px solid #372309;
+}
+
+.project-img {
+    width: 100%;
+    border: 12px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Outer shadow for images */
+}
+
+.project-text {
+    line-height: 1.2rem;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: medium;
+}
+
+.accent-text {
+    color: #372309;
+    font-family: sans-serif;
+    background-color: #D9D9D9;
+    padding:0px 5px;
+    
+}
+
+.react-box::before {
+    content:url('../assets/img/tools/react.png');
+    position: absolute;
+    z-index: 10;
+    top: -20%;
+    left:-20%;
+    transform: translateY(-20%);
+    animation: float1 2s ease-in-out infinite;
+}
+
+/* Different floating animations */
+@keyframes float1 {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.bs-box::after {
+    content: url('../assets/img/tools/bootstrap.png');
+    position: absolute;
+    z-index: 10;
+    top: 70%;
+    left:105%;
+    transform: translateY(-20%);
+    animation: float1 2s ease-in-out infinite;
+}
+
+.ts-box::before {
+    content: url('../assets/img/tools/typescript.png');
+    position: absolute;
+    z-index: 10;
+    top: 150%;
+    left:-30%;
+    transform: translateY(-20%);
+    animation: float1 2s ease-in-out infinite;
+}
+
+.html-box::before {
+    content:url('../assets/img/tools/html5.png');
+    position: absolute;
+    z-index: 10;
+    top: -20%;
+    left:-20%;
+    transform: translateY(-20%);
+    animation: float1 2s ease-in-out infinite;
+    
+}
+
+.css-box::after {
+    content:url('../assets/img/tools/css3.png');
+    position: absolute;
+    z-index: 10;
+    top: 70%;
+    left:105%;
+    transform: translateY(100%);
+    animation: float1 2s ease-in-out infinite;
+
+}
+
+.js-box::after {
+    content: url('../assets/img/tools/javascript.png');
+    position: absolute;
+    z-index: 10;
+    top: 70%;
+    left:105%;
+    transform: translateY(-20%);
+    animation: float1 2s ease-in-out infinite;
+
+}
+
+.sass-box::before {
+    content:url('../assets/img/tools/sass.png');
+    position: absolute;
+    z-index: 10;
+    top: 150%;
+    left:-30%;
+    transform: translateY(-20%);
+    animation: float1 2s ease-in-out infinite;
+
+}
+
+.js-last-box::after {
+    content: url('../assets/img/tools/javascript.png');
+    position: absolute;
+    z-index: 10;
+    top: 120%;
+    left:-25%;
+    transform: translateY(-20%);
+    animation: float1 2s ease-in-out infinite;
+
+}

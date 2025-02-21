@@ -1,0 +1,111 @@
+
+
+h1 {
+  font-size: 7rem;
+}
+
+.name {
+    font-family: 'UpheavalPro';
+    text-wrap: wrap;
+    color: darkblue;
+    text-align: center;
+}
+.name h1 {
+    text-transform: uppercase;
+    line-height: 5rem;
+    font-size: 7rem;
+}
+
+.name p {
+    text-align: end;
+}
+
+.name-container {
+    text-align: end;
+    /* width: 60%; */
+}
+
+.about-me p {
+    width: 80%;
+}
+
+.university {
+    font-family: 'Minercraftory';
+}
+
+.hobbies {
+    width: 40%;
+}
+
+li {
+    list-style-type: none;
+}
+a {
+    color: darkblue;
+}
+
+.team-container {
+    gap: 100px; /* Adds space between ducks */
+}
+
+.floating {
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+/* Each duck has a unique floating animation */
+.duck1 {
+    animation: float1 3s ease-in-out infinite;
+}
+.duck2 {
+    animation: float2 4s ease-in-out infinite;
+}
+.duck3 {
+    animation: float3 2.5s ease-in-out infinite;
+}
+.duck4 {
+    animation: float4 3.5s ease-in-out infinite;
+}
+
+/* Different floating animations */
+@keyframes float1 {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes float2 {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes float3 {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-25px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes float4 {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+.bump-info::before {
+    content:url('../assets/img/boxes/info.svg');
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-20%);
+    transform: translateX(-250%)
+}
+
+
+.contact-info::after {
+    content: url('../assets/img/contacts-info.svg');
+    position: absolute;
+    z-index: 10;
+    right: -2%;
+    top: 40%;
+}
