@@ -215,7 +215,7 @@ const App = () => {
       new GenericObject({ x: -1, y: window.innerHeight - (platformImage.height + treeImage.height), image: treeImage }),
       new GenericObject({ x: platformImage.width * 2, y: window.innerHeight - (platformImage.height + treeImage.height), image: treeImage }),
       new GenericObject({ x: platformImage.width * 6, y: window.innerHeight - (platformImage.height + treeImage.height), image: treeImage }),
-      new GenericObject({ x: platformImage.width * 9+250, y: window.innerHeight - (platformImage.height + contactsImage.height), image: contactsImage}),
+      // new GenericObject({ x: platformImage.width * 9+250, y: window.innerHeight - (platformImage.height + contactsImage.height), image: contactsImage}),
 
     ];
       contactsBoxPosition = { x: platformImage.width *3, y: window.innerHeight - platformImage.height, width: contactsImage.width, height: contactsImage.height };
