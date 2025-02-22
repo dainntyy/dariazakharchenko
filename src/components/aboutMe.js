@@ -31,13 +31,13 @@ const Portfolio = ({ scrollOffset }) => {
           }}
     >
          
-          <div className='mb-5 p-5 section text-center name' style={{ width: '100vw' }}>
+          <div className='mb-5 p-5 section text-center name' style={{ width: '1500px' }}>
               <div className='name-container'>
                       <h1 className='display-1 p-0'>Daria Zakharchenko</h1>
               </div>
                       <p className='mt-4' style={{fontSize: '1.85rem'}}>Front-end developer</p>
                   </div>
-                  <div className='section about-me d-flex flex-column align-items-center justify-content-center ms-5 ps-5' style={{width: '100vw'}}>
+                  <div className='section about-me d-flex flex-column align-items-center justify-content-center ms-5 ps-5' style={{width: '1500px'}}>
                       <p className='fs-1 text-center'>
                           Hi, I'm Daria!
                       </p>
@@ -46,10 +46,10 @@ const Portfolio = ({ scrollOffset }) => {
           Currently I'm living in Portugal
                       </p>
                   </div>
-                  <div className='section d-flex' style={{width: '100vw'}}>
+                  <div className='section d-flex' style={{width: '1500px'}}>
                       <p className='fs-2 text-center hobbies mt-5' style={{lineHeight: '2rem'}}>I like to draw and read but ofc when i have time, like i did with this duck (he's cute i know)</p>
           </div>
-          <div className='section' style={{width: '100vw'}}>
+          <div className='section' style={{width: '1500px'}}>
         <p className='fs-2 bump-info' style={{width: '100%'}}>Some projects that i did:</p>
         <div style={{ width: '100px' }}></div>
         <div style={{width:'100px'}}></div>        
@@ -59,7 +59,7 @@ const Portfolio = ({ scrollOffset }) => {
         <div style={{width:'100px'}}></div>
 
       </div>
-      <div className='section d-flex flex-column text-center contact-info' style={{ width: '100vw' }}>
+      <div className='section d-flex flex-column text-center contact-info' style={{ width: '1500px' }}>
     <p className='fs-3 mb-5'>Our team: </p>
     <ul className='team-container d-flex justify-content-center'>
         <li className="floating duck1">

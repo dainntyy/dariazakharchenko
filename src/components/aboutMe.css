@@ -102,10 +102,10 @@ a {
 }
 
 
-.contact-info::after {
+/* .contact-info::after {
     content: url('../assets/img/contacts-info.svg');
     position: absolute;
     z-index: 10;
-    right: -2%;
+    left: 100%;
     top: 40%;
-}
+} */

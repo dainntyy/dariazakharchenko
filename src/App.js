@@ -195,6 +195,7 @@ const App = () => {
     new Platform({ x: platformImage.width * 12-150, y: window.innerHeight - platformImage.height, image: platformImage }), 
     new Platform({ x: platformImage.width * 13 -150, y: window.innerHeight - platformImage.height, image: platformImage }), 
     new Platform({ x: platformImage.width * 14-150, y: window.innerHeight - platformImage.height, image: platformImage }), 
+    new Platform({ x: platformImage.width * 15-150, y: window.innerHeight - platformImage.height, image: platformImage }), 
     
     
     
@@ -221,12 +222,12 @@ const App = () => {
       contactsBoxPosition = { x: platformImage.width *3, y: window.innerHeight - platformImage.height, width: contactsImage.width, height: contactsImage.height };
       
       boxesRef.current =  [
-    new Box({ x: platformImage.width*8 -150, y: 300, image: createImage(box1), id: 1}),
-    new Box({ x: platformImage.width*8+ 70, y: 300, image: createImage(box2), id: 2}),
-    new Box({ x: platformImage.width*8 +290, y: 300, image: createImage(box3), id: 3}),
-    new Box({ x: platformImage.width*8 + 510, y: 300, image: createImage(box4), id: 4}),
-    new Box({ x: platformImage.width*8 + 730, y: 300, image: createImage(box5), id: 5}),
-   new Box({ x: platformImage.width*8 +950, y: 300, image: createImage(box6), id: 6}),
+    new Box({ x: platformImage.width*8 -150, y: 310, image: createImage(box1), id: 1}),
+    new Box({ x: platformImage.width*8+ 70, y: 310, image: createImage(box2), id: 2}),
+    new Box({ x: platformImage.width*8 +290, y: 310, image: createImage(box3), id: 3}),
+    new Box({ x: platformImage.width*8 + 510, y: 310, image: createImage(box4), id: 4}),
+    new Box({ x: platformImage.width*8 + 730, y: 310, image: createImage(box5), id: 5}),
+   new Box({ x: platformImage.width*8 +950, y: 310, image: createImage(box6), id: 6}),
   ];
     
     keys.current = { right: { pressed: false }, left: { pressed: false }, down:{pressed: false} };
@@ -465,13 +466,9 @@ const App = () => {
 
   return (
     <>
-      <div style={{position: "relative", width: "100vw", height: "100vh", overflow: "hidden"}}>
-        <canvas ref={canvasRef} style={{ display: "block", width: "100vw", height: "100vh", position: "absolute",
-    top: "0",
-    left: "0",
-          zIndex: 0
-        }} />
-        <Portfolio scrollOffset={portfolioOffset} style={{zIndex: 1, position: "absolute"}} />
+      <div  style={{position: "relative", width: "100vw", height: "100vh", overflow: "hidden"}}>
+        <canvas id='game-container' ref={canvasRef}  />
+        <Portfolio scrollOffset={portfolioOffset} style={{zIndex: 0, position: "absolute"}} />
         <div className='keys-box'>
           <img src={require('./assets/img/keys.svg').default}/>
         </div>

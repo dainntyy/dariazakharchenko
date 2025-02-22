@@ -1,6 +1,18 @@
 * {
     color: darkblue;
     font-family: 'UpheavalPro';
+    /* background-color: darkblue; */
+}
+
+
+#game-container {
+    /* width: 800px;   Fixed width */
+    height: 700px;  /* Fixed height */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center it */
+    background-color: #4d90ba; /* Optional: Set background */
 }
 
 .keys-box {
