@@ -88,7 +88,7 @@ I was using <span className='accent-text' style={{ color: "#372309" }}> React, T
             }
             {activeBox === 5 && 
               <Row className='d-flex align-items-center'>
-                <Col xs={5} className='react-box js-box'>
+                <Col xs={5} className='html-box js-box'>
                   <img src={ require('../assets/img/projects/modernBakery.gif')} className='project-img' />
                 </Col>
                 <Col className='sass-box'>
