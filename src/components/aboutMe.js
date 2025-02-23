@@ -27,7 +27,6 @@ const Portfolio = ({ scrollOffset }) => {
         height: "60vh",
         pointerEvents: "none", // Ensures interaction with game
         transform: `translateX(${-scrollOffset}px)`, // Moves with player
-        zIndex: 1
           }}
     >
          
@@ -46,11 +45,11 @@ const Portfolio = ({ scrollOffset }) => {
           Currently I'm living in Portugal
                       </p>
                   </div>
-                  <div className='section d-flex' style={{width: '1500px'}}>
+                  <div className='section d-flex mt-5' style={{width: '1500px'}}>
                       <p className='fs-2 text-center hobbies mt-5' style={{lineHeight: '2rem'}}>I like to draw and read but ofc when i have time, like i did with this duck (he's cute i know)</p>
           </div>
-          <div className='section' style={{width: '1500px'}}>
-        <p className='fs-2 bump-info' style={{width: '100%'}}>Some projects that i did:</p>
+          <div className='section d-flex flex-column mt-5' style={{width: '1500px'}}>
+        <p className='fs-2 bump-info mt-5' style={{width: '100%'}}>Some projects that i did:</p>
         <div style={{ width: '100px' }}></div>
         <div style={{width:'100px'}}></div>        
         <div style={{width:'100px'}}></div>        
@@ -60,7 +59,7 @@ const Portfolio = ({ scrollOffset }) => {
 
       </div>
       <div className='section d-flex flex-column text-center contact-info' style={{ width: '1500px' }}>
-    <p className='fs-3 mb-5'>Our team: </p>
+    <p className='fs-3 m-5'>Our team: </p>
     <ul className='team-container d-flex justify-content-center'>
         <li className="floating duck1">
             <img src={require('../assets/img/team/duck1.png')} style={{ maxWidth: "160px" }} />
@@ -76,18 +75,6 @@ const Portfolio = ({ scrollOffset }) => {
         </li>
     </ul>
       </div>
-      {/* <div className='section' style={{width: '100vw'}}></div> */}
-      {/* <div className='section d-flex flex-column justify-content-center align-items-center' style={{ width: '100vw' }}>
-        <div style={{width: '80%'}}>
-          <p className='fs-3 ms-5'>Contacts:</p>
-          <ul className='p-0 ms-5'>
-            <li>Email: <a href="mailto:z2507dasha@gmail.com" style={{ color: 'darkblue' }}>z2507dasha@gmail.com</a></li>
-            <li>GitHub: <a href="https://github.com/dainntyy">github.com/dainntyy</a></li>
-            <li>Insta: <a href='https://www.instagram.com/dainntyy?igsh=OHV1eWxmY3M5cnU4'>@dainntyy</a></li>
-
-            </ul>
-        </div>
-          </div> */}
               
     </div>
   );

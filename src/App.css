@@ -24,6 +24,14 @@
     opacity:0 ;
 }
 
+.border-container {
+  width: 100vw;
+  height: 100vh;
+  border: 500px solid black;
+  z-index: 1000;
+  background-color: transparent !important;
+}
+
 @keyframes fadeOut {
   0% {
     opacity: 1;

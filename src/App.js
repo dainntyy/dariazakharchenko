@@ -25,6 +25,7 @@ import Contacts from './components/contacts';
 import './App.css'
 
 const gravity = 1;
+const boxHeight = window.innerHeight*0.4;
 
 function createImage(imageSrc) {
     const image = new Image();
@@ -222,12 +223,12 @@ const App = () => {
       contactsBoxPosition = { x: platformImage.width *3, y: window.innerHeight - platformImage.height, width: contactsImage.width, height: contactsImage.height };
       
       boxesRef.current =  [
-    new Box({ x: platformImage.width*8 -150, y: 310, image: createImage(box1), id: 1}),
-    new Box({ x: platformImage.width*8+ 70, y: 310, image: createImage(box2), id: 2}),
-    new Box({ x: platformImage.width*8 +290, y: 310, image: createImage(box3), id: 3}),
-    new Box({ x: platformImage.width*8 + 510, y: 310, image: createImage(box4), id: 4}),
-    new Box({ x: platformImage.width*8 + 730, y: 310, image: createImage(box5), id: 5}),
-   new Box({ x: platformImage.width*8 +950, y: 310, image: createImage(box6), id: 6}),
+    new Box({ x: platformImage.width*8 -150, y: boxHeight, image: createImage(box1), id: 1}),
+    new Box({ x: platformImage.width*8+ 70, y: boxHeight, image: createImage(box2), id: 2}),
+    new Box({ x: platformImage.width*8 +290, y: boxHeight, image: createImage(box3), id: 3}),
+    new Box({ x: platformImage.width*8 + 510, y: boxHeight, image: createImage(box4), id: 4}),
+    new Box({ x: platformImage.width*8 + 730, y: boxHeight, image: createImage(box5), id: 5}),
+   new Box({ x: platformImage.width*8 +950, y: boxHeight, image: createImage(box6), id: 6}),
   ];
     
     keys.current = { right: { pressed: false }, left: { pressed: false }, down:{pressed: false} };
@@ -466,18 +467,22 @@ const App = () => {
 
   return (
     <>
-      <div  style={{position: "relative", width: "100vw", height: "100vh", overflow: "hidden"}}>
-        <canvas id='game-container' ref={canvasRef}  />
-        <Portfolio scrollOffset={portfolioOffset} style={{zIndex: 0, position: "absolute"}} />
-        <div className='keys-box'>
-          <img src={require('./assets/img/keys.svg').default}/>
+      <div style={{ position: "relative", width: "100vw", height: "100vh", overflow: "hidden" }}>
+        {/* <div className='border-container'> */}
+          <canvas id='game-container' ref={canvasRef} style={{zIndex: 0}}>
+          </canvas>
+            <Portfolio scrollOffset={portfolioOffset} style={{position: 'absolute', zIndex: 200}} />
+          
+          <div className='keys-box'>
+            <img src={require('./assets/img/keys.svg').default}/>
+          </div>
+          <Contacts show={ isContactsModalOpen} onHide={() => setIsContactsModalOpen(false)}/>
+          
+  {/* React-Bootstrap Modal */}
+          <ModalWindow activeBox={activeBox} handleClose={handleClose} />
         </div>
-        <Contacts show={ isContactsModalOpen} onHide={() => setIsContactsModalOpen(false)}/>
-        
-{/* React-Bootstrap Modal */}
-        <ModalWindow activeBox={activeBox} handleClose={handleClose} />
 
-      </div>
+      {/* </div> */}
     </>
   )
 };
