@@ -24,13 +24,9 @@
     opacity:0 ;
 }
 
-.border-container {
-  width: 100vw;
-  height: 100vh;
-  border: 500px solid black;
-  z-index: 1000;
-  background-color: transparent !important;
-}
+/* .border-container {
+  border: 50px solid black;
+} */
 
 @keyframes fadeOut {
   0% {

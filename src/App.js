@@ -25,7 +25,9 @@ import Contacts from './components/contacts';
 import './App.css'
 
 const gravity = 1;
-const boxHeight = window.innerHeight*0.4;
+const boxHeight = window.innerHeight * 0.3;
+const gameBorderWidth = Math.floor(window.innerWidth * 0.1) + 'px';
+const gameBorderHeight =  Math.floor(window.innerHeight * 0.1) + 'px';
 
 function createImage(imageSrc) {
     const image = new Image();
@@ -35,7 +37,7 @@ function createImage(imageSrc) {
  
 class Player {
     constructor() {
-        this.position = { x: 100, y: 100 };
+        this.position = { x: 150, y: 150 };
         this.velocity = { x: 0, y: 0 };
         this.width = 69;
       this.height = 130;
@@ -163,6 +165,7 @@ const App = () => {
   let boxesRef = useRef([]);
     
   let genericObject = useRef([]);
+  let cnvsHeight;
   let treeImage;
     
     const keys = useRef({ right: { pressed: false }, left: { pressed: false }, down:{pressed:false} });
@@ -257,7 +260,8 @@ const App = () => {
         const canvas = canvasRef.current;
         const context = canvas.getContext("2d");
         canvas.width = canvasSize.width;
-        canvas.height = canvasSize.height;
+      canvas.height = canvasSize.height;
+      cnvsHeight = canvas.height;
 
         const animate = () => {
             requestAnimationFrame(animate);
@@ -402,6 +406,7 @@ const App = () => {
 
         };
       init();
+      console.log(gameBorderWidth);
 
       animate();
 
@@ -467,7 +472,7 @@ const App = () => {
 
   return (
     <>
-      <div style={{ position: "relative", width: "100vw", height: "100vh", overflow: "hidden" }}>
+      <div className='border-container' style={{ position: "relative", width: "100vw", height: "100vh", overflow: "hidden", borderLeftWidth: gameBorderWidth, borderRightWidth: gameBorderWidth, borderColor: "black", borderStyle: window.innerHeight<=770 ? 'none':"solid", borderTopWidth: gameBorderHeight, borderBottomWidth: gameBorderHeight }}>
         {/* <div className='border-container'> */}
           <canvas id='game-container' ref={canvasRef} style={{zIndex: 0}}>
           </canvas>
