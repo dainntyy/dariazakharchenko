@@ -45,7 +45,8 @@ a {
 }
 
 .team-container {
-    gap: 100px; /* Adds space between ducks */
+    gap: 50px; /* Adds space between ducks */
+    padding-left: 1000px;
 }
 
 .floating {
@@ -96,8 +97,8 @@ a {
     content:url('../assets/img/boxes/info.svg');
     position: absolute;
     z-index: 10;
-    top: 50%;
-    transform: translateY(-20%);
+    top: 10%;
+    /* transform: translateY(-20%); */
     transform: translateX(-250%)
 }
 
