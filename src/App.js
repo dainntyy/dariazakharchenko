@@ -154,6 +154,8 @@ const App = () => {
   const [activeBox, setActiveBox] = useState(null);
   const handleClose = () => setActiveBox(null); // Close overlay
   const [isContactsModalOpen, setIsContactsModalOpen] = useState(false);
+  const isAnyModalOpen = isContactsModalOpen || activeBox !== null; // Check if any modal is open
+
 
   
 
@@ -280,7 +282,9 @@ const App = () => {
                 playerRef.current.velocity.x = playerRef.current.speed;
             } else if ((keys.current.left.pressed && playerRef.current.position.x >= canvas.width * 0.1) ||( keys.current.left.pressed && playerRef.current.position.x > 0 && scrollOffset === 0)) {
                 playerRef.current.velocity.x = -playerRef.current.speed;
-            } else {
+            }
+
+            else {
                 playerRef.current.velocity.x = 0;
 
               if (keys.current.right.pressed) {
@@ -384,18 +388,18 @@ const App = () => {
         box.bump(); // Trigger the box bump animation
     }
 
-  // **⬇️ Player lands on the box**
-  if (
-    playerRef.current.position.y + playerRef.current.height <= box.position.y &&
-    playerRef.current.position.y + playerRef.current.height + playerRef.current.velocity.y >= box.position.y &&
-    playerRef.current.position.x + playerRef.current.width >= box.position.x &&
-    playerRef.current.position.x <= box.position.x + box.width
-  ) {
-    setActiveBox(null);
-    playerRef.current.velocity.y = 0; // Stop falling
-    playerRef.current.position.y = box.position.y - playerRef.current.height; // Place player on top
-  }
-});
+      // **⬇️ Player lands on the box**
+        if (
+          playerRef.current.position.y + playerRef.current.height <= box.position.y &&
+          playerRef.current.position.y + playerRef.current.height + playerRef.current.velocity.y >= box.position.y &&
+          playerRef.current.position.x + playerRef.current.width >= box.position.x &&
+          playerRef.current.position.x <= box.position.x + box.width
+        ) {
+          setActiveBox(null);
+          playerRef.current.velocity.y = 0; // Stop falling
+          playerRef.current.position.y = box.position.y - playerRef.current.height; // Place player on top
+        }
+      });
 
 
           
@@ -406,12 +410,11 @@ const App = () => {
 
         };
       init();
-      console.log(gameBorderWidth);
-
       animate();
 
 
-        const handleKeyDown = (event) => {
+      const handleKeyDown = (event) => {
+
             switch (event.key) {
               case "ArrowUp":
                     playerRef.current.velocity.y = -20; 
@@ -441,7 +444,7 @@ const App = () => {
             }
         };
 
-        const handleKeyUp = (event) => {
+      const handleKeyUp = (event) => {
             switch (event.key) {
                 case "ArrowLeft":
                 keys.current.left.pressed = false;
@@ -472,7 +475,7 @@ const App = () => {
 
   return (
     <>
-      <div className='border-container' style={{ position: "relative", width: "100vw", height: "100vh", overflow: "hidden", borderLeftWidth: gameBorderWidth, borderRightWidth: gameBorderWidth, borderColor: "black", borderStyle: window.innerHeight<=760 ? 'none':"solid", borderTopWidth: gameBorderHeight, borderBottomWidth: gameBorderHeight }}>
+      <div className='border-container' style={{ position: "relative", width: "100vw", height: "100vh", overflow: "hidden", borderLeftWidth: gameBorderWidth, borderRightWidth: gameBorderWidth, borderColor: "black", borderStyle: window.innerHeight<=750 ? 'none':"solid", borderTopWidth: gameBorderHeight, borderBottomWidth: gameBorderHeight }}>
         {/* <div className='border-container'> */}
           <canvas id='game-container' ref={canvasRef} style={{zIndex: 0}}>
           </canvas>
@@ -483,7 +486,6 @@ const App = () => {
           </div>
           <Contacts show={ isContactsModalOpen} onHide={() => setIsContactsModalOpen(false)}/>
           
-  {/* React-Bootstrap Modal */}
           <ModalWindow activeBox={activeBox} handleClose={handleClose} />
         </div>
 

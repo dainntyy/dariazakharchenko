@@ -48,7 +48,7 @@ const Portfolio = ({ scrollOffset }) => {
                   <div className='section d-flex mt-5' style={{width: '1500px'}}>
                       <p className='fs-2 text-center hobbies mt-5' style={{lineHeight: '2rem'}}>I like to draw and read but ofc when i have time, like i did with this duck (he's cute i know)</p>
           </div>
-          <div className='section d-flex flex-column ms-5' style={{width: '1500px'}}>
+          <div className='section d-flex flex-column ms-5 me-5' style={{width: '1800px'}}>
         <p className='fs-2 bump-info mt-5 ms-5' style={{width: '100%'}}>Some projects that i did:</p>
         <div style={{ width: '100px' }}></div>
         <div style={{width:'100px'}}></div>        
@@ -58,7 +58,7 @@ const Portfolio = ({ scrollOffset }) => {
         <div style={{width:'100px'}}></div>
 
       </div>
-      <div className='section d-flex flex-column text-center contact-info' style={{ width: '700px' }}>
+      <div className='section d-flex flex-column text-center contact-info ms-5' style={{ width: '700px' }}>
     <p className='fs-3 m-5'>Our team: </p>
     <ul className='team-container d-flex justify-content-center'>
         <li className="floating duck1">
