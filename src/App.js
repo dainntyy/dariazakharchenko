@@ -472,7 +472,7 @@ const App = () => {
 
   return (
     <>
-      <div className='border-container' style={{ position: "relative", width: "100vw", height: "100vh", overflow: "hidden", borderLeftWidth: gameBorderWidth, borderRightWidth: gameBorderWidth, borderColor: "black", borderStyle: window.innerHeight<=770 ? 'none':"solid", borderTopWidth: gameBorderHeight, borderBottomWidth: gameBorderHeight }}>
+      <div className='border-container' style={{ position: "relative", width: "100vw", height: "100vh", overflow: "hidden", borderLeftWidth: gameBorderWidth, borderRightWidth: gameBorderWidth, borderColor: "black", borderStyle: window.innerHeight<=760 ? 'none':"solid", borderTopWidth: gameBorderHeight, borderBottomWidth: gameBorderHeight }}>
         {/* <div className='border-container'> */}
           <canvas id='game-container' ref={canvasRef} style={{zIndex: 0}}>
           </canvas>
