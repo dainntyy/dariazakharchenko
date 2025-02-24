@@ -16,6 +16,15 @@ export default function Contacts({ show, onHide  }) {
                     <p style={{ color: "#372309" }}>GitHub: <a href='https://github.com/dainntyy' target='_blank' style={{ color: "#372309" }}>@dainntyy</a></p>
                     <p style={{ color: "#372309" }}>Insta: <a href='https://www.instagram.com/dainntyy?igsh=OHV1eWxmY3M5cnU4' target='_blank' style={{ color: "#372309" }}>@dainntyy</a></p>
                 </Modal.Body>
+                <div className='line-bord-footer'>
+                    <Modal.Footer id='bord-nn'>
+                        <Button
+                            variant='outline-dark'
+                        onClick={() => window.open('/resume_Daria.pdf', '_blank')}>
+                        View Resume
+                        </Button>
+                    </Modal.Footer>
+                </div>
             </div>
         </Modal>
     );
