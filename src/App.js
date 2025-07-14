@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from "react";
 import platformImg from "./assets/img/platform.png";
 import platformSmallImg from './assets/img/platformSmall.png';
 import backgroundImg from "./assets/img/background.png";
-import backgroundImg2 from "./assets/img/background2.png";
 
 import spriteStandRight from './assets/img/standingSprite.png';
 import spriteRunLeft from './assets/img/spriteRunLeft.png';

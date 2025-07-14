@@ -20,7 +20,7 @@ export default function Contacts({ show, onHide  }) {
                     <Modal.Footer id='bord-nn'>
                         <Button
                             variant='outline-dark'
-                        onClick={() => window.open('/resume_Daria.pdf', '_blank')}>
+                        onClick={() => window.open('/resume_Daria_upd.pdf', '_blank')}>
                         View Resume
                         </Button>
                     </Modal.Footer>

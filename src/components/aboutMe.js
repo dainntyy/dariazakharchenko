@@ -41,7 +41,7 @@ const Portfolio = ({ scrollOffset }) => {
                           Hi, I'm Daria!
                       </p>
                       <p className='fs-2 text-center' style={{width: '60%'}}>
-          I'm a fourth-year Computer Science student at the <span className='university'>Sumy State University (Ukraine)</span>.<br />
+          I'm a bachelor of Computer Science. I finished <span className='university'>Sumy State University (Ukraine)</span>.<br />
           Currently I'm living in Portugal
                       </p>
                   </div>
@@ -60,9 +60,9 @@ const Portfolio = ({ scrollOffset }) => {
         </div>
 
       </div>
-      <div className='section d-flex flex-column text-center contact-info align-items-end' style={{ width: '500px', position: 'relative', right: window.innerHeight <= 700 ? '-15%' :''}}>
+      <div className='section d-flex flex-column text-center contact-info align-items-end' >
     <p className='fs-3 m-5 text-end' style={{width: '100%'}}>Our team: </p>
-    <ul className='team-container d-flex justify-content-center'>
+    <ul className='team-container d-flex justify-content-center p-0'>
         <li className="floating duck1">
             <img src={require('../assets/img/team/duck1.png')} style={{ maxWidth: "160px" }} />
         </li>
